@@ -71,8 +71,11 @@ public class Penggajian {
         System.out.println("Status          = " + status);
         System.out.println("Jumlah Anak     = " + anak);
         System.out.println("Gaji Pokok      = " + kursIndonesia.format(gpokok));
-
-        tunjistri = 10 * gpokok / 100;
+        
+        if (status.equals("Nikah")) {
+            tunjistri = 10 * gpokok / 100;
+        }
+        
         System.out.println("Tunj Suami/Istri = " + kursIndonesia.format(tunjistri));
 
         if (anak == 1) {
